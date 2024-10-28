@@ -12,6 +12,7 @@ void addRoomConflicts(CNF& formula, int numSubjects, int numTimeslots, int numRo
 void addGroupConflicts(CNF& formula, const vector<int>& groups, int numTimeslots, int numRooms);
 
 int main() {
+    cout << "Це наш перший сумісний проєкт!" << endl;
     // Приклад ініціалізації параметрів
     int numSubjects = 3;
     int numTimeslots = 5;
