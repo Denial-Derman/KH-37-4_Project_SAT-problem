@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿//Вітка тестова Завдов'єва Дениса 
+
+#include <iostream>
 #include <vector>
 #include <unordered_set>
 #include "CNF.h"
