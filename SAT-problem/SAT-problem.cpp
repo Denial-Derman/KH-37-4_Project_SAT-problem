@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿//Вітка тестова Завдов'єва Дениса 
+
+#include <iostream>
 #include <vector>
 #include <unordered_set>
 #include "CNF.h"
@@ -13,6 +15,7 @@ void addGroupConflicts(CNF& formula, const vector<int>& groups, int numTimeslots
 
 int main() {
     cout << "Це наш перший сумісний проєкт!" << endl;
+    cout << "Денис кіт" << endl;
     // Приклад ініціалізації параметрів
     int numSubjects = 3;
     int numTimeslots = 5;
@@ -36,4 +39,6 @@ int main() {
     }
 
     return 0;
+
+
 }
