@@ -17,7 +17,7 @@ void addGroupConflicts(CNF& formula, const vector<int>& groups, int numTimeslots
 int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
-    cout << "Це наш перший сумісний проєкт!" << endl;
+    cout << "Це наш перший сумісний проєкт! І так, почнімо" << endl;
     // Приклад ініціалізації параметрів
     int numSubjects = 3;
     int numTimeslots = 5;
