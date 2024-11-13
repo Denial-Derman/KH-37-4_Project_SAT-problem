@@ -1,10 +1,8 @@
 ﻿  SAT-problem.cpp
-D:\Denis\Навчання\СумДУ\Алгоритми і структури даних\project\SAT-problem\Clause.h(25,50): warning C4566: character represented by universal-character-name '\u2228' cannot be represented in the current code page (1251)
+D:\Denis\Навчання\СумДУ\Алгоритми і структури даних\Repos\KH-37-4_Project_SAT-problem\SAT-problem\Clause.h(33,50): warning C4566: character represented by universal-character-name '\u2228' cannot be represented in the current code page (1251)
   (compiling source file 'SAT-problem.cpp')
   
-D:\Denis\Навчання\СумДУ\Алгоритми і структури даних\project\SAT-problem\CNF.h(24,21): warning C4566: character represented by universal-character-name '\u2227' cannot be represented in the current code page (1251)
+D:\Denis\Навчання\СумДУ\Алгоритми і структури даних\Repos\KH-37-4_Project_SAT-problem\SAT-problem\CNF.h(24,25): warning C4566: character represented by universal-character-name '\u2227' cannot be represented in the current code page (1251)
   (compiling source file 'SAT-problem.cpp')
   
-SAT-problem.obj : error LNK2019: unresolved external symbol "class CNF __cdecl createScheduleSAT(int,int,int,class std::vector<int,class std::allocator<int> > const &,class std::vector<int,class std::allocator<int> > const &)" (?createScheduleSAT@@YA?AVCNF@@HHHAEBV?$vector@HV?$allocator@H@std@@@std@@0@Z) referenced in function main
-SAT-problem.obj : error LNK2019: unresolved external symbol "bool __cdecl DPLL(class CNF const &,class std::unordered_set<int,struct std::hash<int>,struct std::equal_to<int>,class std::allocator<int> > &)" (?DPLL@@YA_NAEBVCNF@@AEAV?$unordered_set@HU?$hash@H@std@@U?$equal_to@H@2@V?$allocator@H@2@@std@@@Z) referenced in function main
-D:\Denis\Навчання\СумДУ\Алгоритми ? структури даних\project\SAT-problem\x64\Debug\SAT-problem.exe : fatal error LNK1120: 2 unresolved externals
+  SAT-problem.vcxproj -> D:\Denis\Навчання\СумДУ\Алгоритми і структури даних\Repos\KH-37-4_Project_SAT-problem\SAT-problem\x64\Debug\SAT-problem.exe

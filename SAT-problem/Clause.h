@@ -12,9 +12,17 @@ class Clause {
 public:
     vector<int> literals; // Вектор літералів
 
+    // Конструктор за замовчуванням
+    Clause() {}
+
     // Додає літерал до клаузи
     void addLiteral(int literal) {
         literals.push_back(literal);
+    }
+
+    // Перевірка, чи клауза є порожньою
+    bool isEmpty() const {
+        return literals.empty();
     }
 
     // Функція для виведення клаузи на екран
@@ -29,4 +37,3 @@ public:
 };
 
 #endif // CLAUSE_H
-
