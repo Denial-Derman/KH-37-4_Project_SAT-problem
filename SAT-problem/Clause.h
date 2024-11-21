@@ -26,14 +26,14 @@ public:
     }
 
     // Функція для виведення клаузи на екран
-    void print() const {
+    /*void print() const {
         cout << "(";
         for (size_t i = 0; i < literals.size(); ++i) {
             cout << literals[i];
             if (i < literals.size() - 1) cout << " ∨ ";
         }
         cout << ")";
-    }
+    }*/
 };
 
 #endif // CLAUSE_H

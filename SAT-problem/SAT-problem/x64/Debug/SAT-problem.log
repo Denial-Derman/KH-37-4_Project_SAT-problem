@@ -1,8 +1,6 @@
 ﻿  SAT-problem.cpp
-D:\Denis\Навчання\СумДУ\Алгоритми і структури даних\Repos\KH-37-4_Project_SAT-problem\SAT-problem\Clause.h(33,50): warning C4566: character represented by universal-character-name '\u2228' cannot be represented in the current code page (1251)
-  (compiling source file 'SAT-problem.cpp')
-  
-D:\Denis\Навчання\СумДУ\Алгоритми і структури даних\Repos\KH-37-4_Project_SAT-problem\SAT-problem\CNF.h(24,25): warning C4566: character represented by universal-character-name '\u2227' cannot be represented in the current code page (1251)
-  (compiling source file 'SAT-problem.cpp')
-  
+  SchedulePlanner.cpp
+D:\Denis\Навчання\СумДУ\Алгоритми і структури даних\Repos\KH-37-4_Project_SAT-problem\SAT-problem\SchedulePlanner.cpp(17,21): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+D:\Denis\Навчання\СумДУ\Алгоритми і структури даних\Repos\KH-37-4_Project_SAT-problem\SAT-problem\SchedulePlanner.cpp(19,18): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Generating Code...
   SAT-problem.vcxproj -> D:\Denis\Навчання\СумДУ\Алгоритми і структури даних\Repos\KH-37-4_Project_SAT-problem\SAT-problem\x64\Debug\SAT-problem.exe
