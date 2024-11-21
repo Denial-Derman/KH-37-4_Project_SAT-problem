@@ -10,7 +10,6 @@ using namespace std;
 
 int main() {
     SetConsoleCP(1251);
-    SetConsoleOutputCP(1251);
 
     cout << "Це наш перший сумісний проєкт! І так, почнімо" << endl;
 
