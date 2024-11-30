@@ -8,6 +8,6 @@ SirKatoshi - Савченко С.
 
 KateBilokur - Білокур К.
 
-unkkno0own - Галиченнко А.
+unkkno0own - Галиченко А.
 
 Enilond22 - Кучерявенко Р.

@@ -1,44 +1,70 @@
 ﻿//Вітка тестова Завдов'єва Дениса 
 
 #include <iostream>
-#include <vector>
-#include <unordered_set>
-#include "CNF.h"
+#include "SchedulePlanner.h"
+#include "Assignment.h"
+#include <string>
+#include <Windows.h> 
 
 using namespace std;
 
-CNF createScheduleSAT(int numSubjects, int numTimeslots, int numRooms, const vector<int>& teachers, const vector<int>& groups);
-bool DPLL(const CNF& formula, unordered_set<int>& assignment);
-void addTeacherConflicts(CNF& formula, const vector<int>& teachers);
-void addRoomConflicts(CNF& formula, int numSubjects, int numTimeslots, int numRooms);
-void addGroupConflicts(CNF& formula, const vector<int>& groups, int numTimeslots, int numRooms);
-
 int main() {
-    cout << "Це наш перший сумісний проєкт!" << endl;
-    cout << "Денис кіт" << endl;
-    // Приклад ініціалізації параметрів
-    int numSubjects = 3;
-    int numTimeslots = 5;
-    int numRooms = 2;
-    vector<int> teachers = { 1, 2 }; // Список викладачів
-    vector<int> groups = { 1, 2, 3 }; // Список груп
+    SetConsoleCP(1251);
 
-    // Створення SAT формули
-    CNF formula = createScheduleSAT(numSubjects, numTimeslots, numRooms, teachers, groups);
+    cout << "Це наш перший сумісний проєкт! І так, почнімо" << endl;
 
-    // Вивід формули на консоль
-    formula.print();
-
-    // Виклик DPLL для розв'язання
-    unordered_set<int> assignment;
-    if (DPLL(formula, assignment)) {
-        cout << "Формула задовольняється." << endl;
+    // Завантажуємо дані
+    vector<Group> groups = Group::loadGroups("groups.txt");
+    if (groups.empty()) {
+        cerr << "Помилка: Не вдалося завантажити групи." << endl;
+        return 1;
     }
-    else {
-        cout << "Формула не має розв'язку." << endl;
+
+    vector<Teacher> teachers = Teacher::loadTeachers("teachers.txt");
+    if (teachers.empty()) {
+        cerr << "Помилка: Не вдалося завантажити викладачів." << endl;
+        return 1;
+    }
+
+    vector<Room> rooms = Room::loadRooms("rooms.txt");
+    if (rooms.empty()) {
+        cerr << "Помилка: Не вдалося завантажити аудиторії." << endl;
+        return 1;
+    }
+
+    vector<Subject> subjects = Subject::loadSubjects("subjects.txt");
+    if (subjects.empty()) {
+        cerr << "Помилка: Не вдалося завантажити предмети." << endl;
+        return 1;
+    }
+
+    // Зчитування асоціацій
+    vector<Assignment> assignments = Assignment::loadAssignments("assignments.txt");
+    if (assignments.empty()) {
+        cerr << "Помилка: Не вдалося завантажити асоціації." << endl;
+        return 1;
+    }
+
+    // Створюємо об'єкт планувальника
+    SchedulePlanner planner(groups, teachers, rooms, subjects, assignments);
+
+    // Генеруємо розклад
+    if (planner.generateSchedule()) {
+        string filename;
+        cout << "Введіть назву файлу для збереження розкладу (можна вказати шлях): ";
+        cin.ignore(); // Очищаємо вхід
+        getline(cin, filename); // Вводимо шлях/назву файлу
+
+        // Перевіряємо, чи вказано розширення .txt
+        if (filename.find(".txt") == string::npos) {
+            filename += ".txt"; // Додаємо розширення, якщо відсутнє
+        }
+
+        // Зберігаємо розклад   
+        planner.saveSchedule(filename);
+    } else {
+        cout << "Не вдалося створити розклад." << endl;
     }
 
     return 0;
-
-
 }

@@ -130,10 +130,19 @@
     <ClCompile Include="Clause.cpp" />
     <ClCompile Include="CNF.cpp" />
     <ClCompile Include="SAT-problem.cpp" />
+    <ClCompile Include="SATSolver.cpp" />
+    <ClCompile Include="SchedulePlanner.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Assignment.h" />
     <ClInclude Include="Clause.h" />
     <ClInclude Include="CNF.h" />
+    <ClInclude Include="Group.h" />
+    <ClInclude Include="Room.h" />
+    <ClInclude Include="SATSolver.h" />
+    <ClInclude Include="SchedulePlanner.h" />
+    <ClInclude Include="Subject.h" />
+    <ClInclude Include="Teacher.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
